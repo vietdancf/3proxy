@@ -15,10 +15,9 @@ gen64() {
 }
 install_3proxy() {
     echo "installing 3proxy"
-    URL="https://github.com/3proxy/3proxy/archive/refs/tags/0.9.4.tar.gz"
-    wget $URL 
-    tar -xvf 3proxy-*
-    cd 3proxy-3proxy-0.9.4
+    URL="https://github.com/z3APA3A/3proxy/archive/3proxy-0.8.6.tar.gz"
+    wget -qO- $URL | bsdtar -xvf-
+    cd 3proxy-3proxy-0.8.6
     make -f Makefile.Linux
     mkdir -p /usr/local/etc/3proxy/{bin,logs,stat}
     cp src/3proxy /usr/local/etc/3proxy/bin/
@@ -31,7 +30,7 @@ install_3proxy() {
 gen_3proxy() {
     cat <<EOF
 daemon
-maxconn 2000
+maxconn 4000
 nserver 1.1.1.1
 nserver 8.8.4.4
 nserver 2001:4860:4860::8888
@@ -42,8 +41,10 @@ setgid 65535
 setuid 65535
 stacksize 6291456 
 flush
-$(awk -F "/" '{print "\n" \
-"" $1 "\n" \
+auth strong
+users $(awk -F "/" 'BEGIN{ORS="";} {print $1 ":CL:" $2 " "}' ${WORKDATA})
+$(awk -F "/" '{print "auth strong\n" \
+"allow " $1 "\n" \
 "proxy -6 -n -a -p" $4 " -i" $3 " -e"$5"\n" \
 "flush\n"}' ${WORKDATA})
 EOF
@@ -58,7 +59,7 @@ EOF
 
 gen_data() {
     seq $FIRST_PORT $LAST_PORT | while read port; do
-        echo "//$IP4/$port/$(gen64 $IP6)"
+        echo "user$port/$(random)/$IP4/$port/$(gen64 $IP6)"
     done
 }
 
@@ -88,8 +89,8 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
-FIRST_PORT=42000
-LAST_PORT=43100
+FIRST_PORT=22000
+LAST_PORT=24000
 
 gen_data >$WORKDIR/data.txt
 gen_iptables >$WORKDIR/boot_iptables.sh
@@ -108,6 +109,7 @@ EOF
 bash /etc/rc.local
 
 gen_proxy_file_for_user
-rm -rf /root/3proxy-3proxy-0.9.4
+rm -rf /root/setup.sh
+rm -rf /root/3proxy-3proxy-0.8.6
 
 echo "Starting Proxy"
