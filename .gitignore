@@ -1,0 +1,363 @@
+# # Bỏ qua các tệp tạm thời của Visual Studio, kết quả xây dựng và
+# # tệp được tạo bởi các tiện ích bổ sung Visual Studio phổ biến.
+# #
+# # Nhận thông tin mới nhất từ ​​https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+
+# Tệp dành riêng cho người dùng
+* .rsuser
+* .suo
+* .người dùng
+* .userosschache
+* .sln.docstates
+
+# Tệp dành riêng cho người dùng (MonoDevelop/Xamarin Studio)
+* .userprefs
+
+# Tệp được tạo tự động đơn sắc
+mono_crash. *
+
+# Xây dựng kết quả
+[ Dd ] ebug /
+[ Dd ] ebugPublic /
+[ Rr ] thả lỏng /
+[ Rr ] eleas /
+x64 /
+x86 /
+[ Ww ][ Ii ][ Nn ] 32 /
+[ Aa ][ Rr ][ Mm ]/
+[ Aa ][ Rr ][ Mm ] 64 /
+bld /
+[ Bb ] trong /
+[ Ôi ] bj /
+[ Ôi ] út /
+[ Ll ] ôi /
+[ Ll ] ogs /
+
+# Thư mục tùy chọn/bộ đệm của Visual Studio 2015/2017
+.vs /
+# Bỏ ghi chú nếu bạn có nhiệm vụ tạo tệp tĩnh của dự án trong wwwroot
+# wwwroot/
+
+# Tệp được tạo tự động Visual Studio 2017
+Đã tạo \ Tệp /
+
+# Kết quả thi MSTest
+[ Tt ] est [ Rr ] esult * /
+[ Bb ] uild [ Ll ] og. *
+
+# NUnit
+* .VisualState.xml
+TestResult.xml
+nunit- * .xml
+
+# Xây dựng kết quả của Dự án ATL
+[ Dd ] ebugPS /
+[ Rr ] thảnh thơiPS /
+dlldata.c
+
+# Kết quả điểm chuẩn
+BenchmarkDotNet.Artifacts /
+
+# Lõi .NET
+dự án.lock.json
+project.fragment.lock.json
+hiện vật /
+
+# Giàn giáo ASP.NET
+Giàn giáoReadMe.txt
+
+# PhongCốp
+StyleCopReport.xml
+
+# Tệp được tạo bởi Visual Studio
+* _i.c
+* _p.c
+* _h.h
+* .ilk
+* .meta
+* .obj
+* .iobj
+* .pch
+* .pdb
+* .ipdb
+* .pgc
+* .pgd
+* .rsp
+* .sbr
+* .tlb
+* .tli
+* .tlh
+* .tmp
+* .tmp_proj
+* _wpftmp.csproj
+* .log
+* .vspscc
+* .vssscc
+.builds
+* .pidb
+* .svclog
+* .scc
+
+# Tập tin kiểm tra Chutzpah
+_Chutzpah *
+
+# Tệp bộ đệm Visual C++
+ngứa /
+* .aps
+* .ncb
+* .opendb
+* .opensdf
+* .sdf
+* .cachefile
+* .VC.db
+* .VC.VC.opendb
+
+# Trình hồ sơ Visual Studio
+* .psess
+* .vsp
+* .vspx
+* .sap
+
+# Tệp theo dõi Visual Studio
+* .e2e
+
+# Không gian làm việc cục bộ TFS 2012
+$tf /
+
+# Bộ công cụ tự động hóa hướng dẫn
+* .gpState
+
+# ReSharper là phần bổ trợ mã hóa .NET
+_ReSharper * /
+* . [ Rr ] e [ Ss ] harper
+* .DotSettings.user
+
+# TeamCity là một phần bổ trợ bản dựng
+_Thành Phố *
+
+# DotCover là Công cụ bảo vệ mã
+* .dotCover
+
+# AxoCover là Công cụ bảo vệ mã
+.axoCover / *
+! .axoCover / settings.json
+
+# Coverlet là Công cụ bảo vệ mã đa nền tảng, miễn phí
+vùng phủ sóng * .json
+vùng phủ sóng * .xml
+vùng phủ sóng * .info
+
+# Kết quả bảo hiểm mã Visual Studio
+* .bảo hiểm
+* .coveragexml
+
+#NCrunch _
+_NCrunch_ *
+. * lạo xạo * .local.xml
+nCrunchTemp_ *
+
+# hùng mạnhMoose
+* .mm. *
+AutoTest.Net /
+
+# Bàn làm việc web (sass)
+.sass-cache /
+
+# Thư mục đầu ra Installshield
+[ Ê ] xpress /
+
+# DocProject là phần bổ trợ trình tạo tài liệu
+DocProject / trợ giúp xây dựng /
+DocProject / Help / * .HxT
+DocProject / Trợ giúp / * .HxC
+DocProject / Trợ giúp / * .hhc
+DocProject / Trợ giúp / * .hhk
+DocProject / Trợ giúp / * .hhp
+DocProject / Trợ giúp / Html2
+Tài liệuDự án / Trợ giúp / html
+
+# Thư mục nhấp một lần
+xuất bản /
+
+# Xuất bản đầu ra web
+* . [ Pp ] ublish.xml
+* .azurePubxml
+# Lưu ý: Bình luận dòng tiếp theo nếu bạn muốn kiểm tra cài đặt triển khai web của mình,
+# nhưng chuỗi kết nối cơ sở dữ liệu (có mật khẩu tiềm năng) sẽ không được mã hóa
+* .pubxml
+* .publishproj
+
+# Cài đặt xuất bản ứng dụng web Microsoft Azure. Bình luận dòng tiếp theo nếu bạn muốn
+# kiểm tra cài đặt xuất bản Ứng dụng web Azure của bạn, nhưng chứa thông tin nhạy cảm
+# trong các tập lệnh này sẽ không được mã hóa
+Xuất bản /
+
+# Gói NuGet
+* .nupkg
+# Gói biểu tượng NuGet
+* .snupkg
+# Thư mục gói có thể bị bỏ qua vì Khôi phục gói
+** /[ Pp ] gói / *
+# ngoại trừ bản dựng/, được sử dụng làm mục tiêu MSBuild.
+! ** /[ Pp ] gói / bản dựng /
+# Bỏ ghi chú nếu cần tuy nhiên nói chung nó sẽ được tạo lại khi cần
+# !**/[Pp]ackages/repositories.config
+# Các tệp project.json của NuGet v3 tạo ra nhiều tệp khó hiểu hơn
+* .nuget.props
+* .nuget.mục tiêu
+
+# Đầu ra bản dựng Microsoft Azure
+csx /
+* .build.csdef
+
+# Trình giả lập Microsoft Azure
+ecf /
+rcf /
+
+# Thư mục và tệp gói ứng dụng Windows Store
+Gói ứng dụng /
+Gói hiện vật /
+Gói.StoreAssociation.xml
+_pkginfo.txt
+* .appx
+* .appxbundle
+* .appxupload
+
+# Tệp bộ đệm Visual Studio
+Có thể bỏ qua # tệp kết thúc bằng .cache
+* . [ Cc ] đau
+# nhưng theo dõi các thư mục kết thúc bằng .cache
+! ?* . [ Cc ] đau /
+
+# Khác
+Khách hàngBin /
+~$ *
+* ~
+* .dbmdl
+* .dbproj.schemaview
+* .jfm
+* .pfx
+* .publishsettings
+orleans.codegen.cs
+
+# Bao gồm các tệp tên mạnh có thể gây rủi ro bảo mật
+# (https://github.com/github/gitignore/pull/2483#issue-259490424)
+# *.snk
+
+# Vì có nhiều quy trình công việc, hãy bỏ ghi chú dòng tiếp theo để bỏ qua bower_components
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+# bower_components/
+
+# RIA/Dự án Silverlight
+Đã tạo_Mã /
+
+# Sao lưu và báo cáo tệp từ chuyển đổi tệp dự án cũ
+# lên phiên bản Visual Studio mới hơn. Tập tin sao lưu là không cần thiết,
+# vì chúng tôi có git ;-)
+_UpgradeReport_Files /
+Sao lưu * /
+Nhật ký nâng cấp * .XML
+Nhật ký nâng cấp * .htm
+Dịch vụFabricBackup /
+* .rptproj.bak
+
+# Tệp máy chủ SQL
+* .mdf
+* .ldf
+* .ndf
+
+# Dự án kinh doanh thông minh
+* .rdl.data
+* .bim.layout
+* .bim_ * .settings
+* .rptproj.rsuser
+* - [ Bb ] ackup.rdl
+* - [ Bb ] ackup  ( [ 0-9 ] ).rdl
+* - [ Bb ] ackup  ( [ 0-9 ][ 0-9 ] ).rdl
+
+# Hàng giả của Microsoft
+FakesAssemblies /
+
+# Tệp cài đặt plugin GhostDoc
+* .GhostDoc.xml
+
+# Công cụ Node.js cho Visual Studio
+.ntvs_analysis.dat
+nút_mô-đun /
+
+# Nhật ký xây dựng Visual Studio 6
+* .plg
+
+# Tệp tùy chọn không gian làm việc của Visual Studio 6
+* .opt
+
+# Tệp không gian làm việc được tạo tự động của Visual Studio 6 (chứa các tệp đã được mở, v.v.)
+* .vbw
+
+# Đầu ra bản dựng Visual Studio LightSwitch
+** / * .HTMLClient / GeneratedArtifacts
+** / * .DesktopClient / GeneratedArtifacts
+** / * .DesktopClient / ModelManifest.xml
+** / * .Server / Tạo tác phẩm
+** / * .Server / ModelManifest.xml
+_Pvt_Tiện ích mở rộng
+
+# Trình quản lý phụ thuộc Paket
+.paket / paket.exe
+paket-files /
+
+# FAKE - F# Make
+.giả /
+
+# CodeRush cài đặt cá nhân
+.cr / cá nhân
+
+# Công cụ Python cho Visual Studio (PTVS)
+__pycache__ /
+* .pyc
+
+# Cake - Bỏ comment nếu bạn đang dùng
+# công cụ/**
+# !tools/packages.config
+
+# TabStudio
+* .tss
+
+# Tệp cấu hình JustMock của Telerik
+* .jmconfig
+
+# Đầu ra bản dựng BizTalk
+* .btp.cs
+* .btm.cs
+* .odx.cs
+* .xsd.cs
+
+# Kết quả phân tích giao diện người dùng OpenCover
+OpenCover /
+
+# Đầu ra chạy cục bộ Azure Stream Analytics
+ASALocalRun /
+
+# Nhật ký nhị phân và cấu trúc MSBuild
+* .binlog
+
+# Tệp cấu hình trình gỡ lỗi GPU NVidia Nsight
+* .nvuser
+
+# Thư mục làm việc của MFractors (công cụ năng suất Xamarin)
+.mfractor /
+
+# Lịch sử cục bộ cho Visual Studio
+.localhistory /
+
+# Cơ sở dữ liệu tạm thời kiểm tra sức khỏe BeatPulse
+kiểm tra sức khỏe
+
+# Thư mục sao lưu cho công cụ Chuyển đổi tham chiếu gói trong Visual Studio 2017
+Sao lưu di chuyển /
+
+# Thư mục làm việc của Ionide (công cụ F# VS Code đa nền tảng)
+.ionit /
+
+# Fody - lược đồ XML được tạo tự động
+FodyWeavers.xsd
