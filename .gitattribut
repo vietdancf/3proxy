@@ -1,0 +1,63 @@
+# ################################################ ############################
+# Đặt hành vi mặc định để tự động chuẩn hóa kết thúc dòng.
+# ################################################ ############################
+*  văn bản = tự động
+
+# ################################################ ############################
+# Đặt hành vi mặc định cho khác biệt dấu nhắc lệnh.
+#
+# Điều này là cần thiết cho các bản dựng msysgit trước đó không có nó trên
+# mặc định cho các tệp csharp.
+# Lưu ý: Điều này chỉ được sử dụng bởi dòng lệnh
+# ################################################ ############################
+# *.cs diff=csharp
+
+# ################################################ ############################
+# Đặt trình điều khiển hợp nhất cho các tệp dự án và giải pháp
+#
+# Hợp nhất từ ​​dấu nhắc lệnh sẽ thêm dấu khác vào tệp nếu có
+# là xung đột (Việc hợp nhất từ ​​VS không bị ảnh hưởng bởi các cài đặt bên dưới, trong VS
+# các dấu hiệu khác biệt không bao giờ được chèn). Dấu hiệu khác biệt có thể gây ra những điều sau đây
+# phần mở rộng tệp không tải được trong VS. Một giải pháp thay thế sẽ là điều trị
+# các tệp này ở dạng nhị phân và do đó sẽ luôn xung đột và yêu cầu người dùng
+# can thiệp với mỗi lần hợp nhất. Để làm như vậy, chỉ cần bỏ ghi chú các mục bên dưới
+# ################################################ ############################
+# *.sln hợp nhất=nhị phân
+# *.csproj hợp nhất=nhị phân
+# *.vbproj hợp nhất=nhị phân
+# *.vcxproj hợp nhất=nhị phân
+# *.vcproj hợp nhất=nhị phân
+# *.dbproj hợp nhất=nhị phân
+# *.fsproj hợp nhất=nhị phân
+# *.lsproj hợp nhất=nhị phân
+# *.wixproj hợp nhất=nhị phân
+# *.modelproj hợp nhất=nhị phân
+# *.sqlproj hợp nhất=nhị phân
+# *.wwaproj hợp nhất=nhị phân
+
+# ################################################ ############################
+# hành vi đối với tệp hình ảnh
+#
+# tệp hình ảnh được coi là tệp nhị phân theo mặc định.
+# ################################################ ############################
+# *.jpg nhị phân
+# *.png nhị phân
+# *.gif nhị phân
+
+# ################################################ ############################
+# hành vi khác biệt đối với các định dạng tài liệu phổ biến
+# 
+# Chuyển đổi định dạng tài liệu nhị phân thành văn bản trước khi phân biệt chúng. Tính năng này
+# chỉ khả dụng từ dòng lệnh. Bật nó lên bằng cách bỏ ghi chú
+# mục bên dưới.
+# ################################################ ############################
+# *.doc diff=astextplain
+# *.DOC diff=astextplain
+# *.docx diff=astextplain
+# *.DOCX diff=astextplain
+# *.dot diff=astextplain
+# *.DOT diff=astextplain
+# *.pdf diff=astextplain
+# *.PDF diff=astextplain
+# *.rtf diff=astextplain
+# *.RTF diff=astextplain
