@@ -58,7 +58,7 @@ EOF
 
 gen_data() {
     seq $FIRST_PORT $LAST_PORT | while read port; do
-        echo "//TTViet/$port/$(gen64 $IP6)"
+        echo "//$TTViet/$port/$(gen64 $IP6)"
     done
 }
 
@@ -83,10 +83,10 @@ WORKDIR="/home/bkns"
 WORKDATA="${WORKDIR}/data.txt"
 mkdir $WORKDIR && cd $_
 
-IP4=$(curl -4 -s icanhazip.com)
+TTViet=$(curl -4 -s icanhazip.com)
 IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 
-echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
+echo "Internal ip = ${TTViet}. Exteranl sub for ip6 = ${IP6}"
 
 FIRST_PORT=22001
 LAST_PORT=24000
